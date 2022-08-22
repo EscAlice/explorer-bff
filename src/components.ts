@@ -43,7 +43,7 @@ export async function initComponents(): Promise<AppComponents> {
   const nats = await createNatsComponent({ config, logs })
   const serviceDiscovery = await createServiceDiscoveryComponent({ nats, logs, config })
   const ethereumProvider = new HTTPProvider(
-    `https://rpc.decentraland.org/${encodeURIComponent(ethNetwork)}?project=explorer-bff`,
+    `https://${encodeURIComponent(ethNetwork)}.infura.io/v3/65b4470058624aa493c1944328b19ec0`,
     { fetch: fetch.fetch }
   )
 
